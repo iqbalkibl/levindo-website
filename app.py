@@ -15,27 +15,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///projects.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
-with app.app_context():
-    db.create_all()
 
-class Project(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    company_name = db.Column(db.String(150), nullable=False)
-    category = db.Column(db.String(100), nullable=False)
-    cooperation_type = db.Column(db.String(150), nullable=False)
-    description = db.Column(db.Text, nullable=True)
-    latitude = db.Column(db.Float, nullable=False)
-    longitude = db.Column(db.Float, nullable=False)
-
-    def to_dict(self):
-        return {
-            "company_name": self.company_name,
-            "category": self.category,
-            "cooperation_type": self.cooperation_type,
-            "description": self.description,
-            "lat": self.latitude,
-            "lng": self.longitude
-        }
 # ======================
 # TRANSLATION SYSTEM
 # ======================
