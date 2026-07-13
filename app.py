@@ -19,8 +19,6 @@ db = SQLAlchemy(app)
 with app.app_context():
     db.create_all()
 
-    db = SQLAlchemy(app)
-
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     company_name = db.Column(db.String(150), nullable=False)
