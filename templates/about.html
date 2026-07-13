@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="hero-overlay"></div>
+  
+  <div class="about-wrapper">
+  
+      <div class="about-image">
+          <img src="{{ url_for('static', filename='img/struktur.png') }}" alt="GIS Mapping">
+      </div>
+
+      <div class="about-content">
+        <h2></h2>
+
+          <div class="about-block">
+              <h3>Visi</h3>
+              <p>
+                Menjadikan perusahaan pelayanan jasa konsultan yang mempunyai tingkat kinerja tinggi
+                (high performance), handal dan terpercaya (reliable) sehingga bertumbuh kembang
+                dengan melakukan inovasi ilmu pengetahuan dan teknologi
+              </p>
+          </div>
+
+          <div class="about-block">
+              <h3>Misi</h3>
+              <ul>
+                  <li>Menjalin kerjasama dan mengembangkan kemitraan dengan pemerintah, lembaga swadaya masyarakat, dan swasta untuk berperan serta dalam penyediaan jasa konsultasi pengelolaan sumberdaya alam dan lingkungan.</li>
+                  <li>Mengembangkan dan meningkatkan profesionalisme dalam pelayanan jasa konsultasi pengelolaan sumberdaya alam dan lingkungan, sehingga memberikan manfaat bagi pengguna jasa khususnya dan lingkungan pada umumnya.</li>
+                 
+              </ul>
+          </div>
+
+      </div>
+
+  </div>
+</section>
+
+<section class="container">
+     <div class="about-container">
+        <h2>{{subheading}}</h2>
+        <p>
+           {{tagline_desc}}
+        </p>
+    </div>
+</section>
+
+<section class="container">
+  <div class="about-container">
+
+    <h2>{{ content.legalitas.title }}</h2>
+    
+    <div class="legal-grid">
+     {% for item in content["legalitas"]["legal_list"] %}
+        <div class="legal-item">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.value }}</p>
+          {% if item.desc %}
+            <span>{{ item.desc }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="container">
+    <div class="about-container">
+      <h2>{{content1}}</h2>
+      <p>
+         {{content2}}
+      </p>
+      <ol>
+  {% for item in content.alat %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ol>
+</section>
+
+
+
+{% endblock %}

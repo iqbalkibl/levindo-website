@@ -1,0 +1,52 @@
+<header class="navbar">
+    <div class="nav-container">
+  
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/Levindo1.png') }}" alt="Levindo Citra Buana">
+      </div>
+  
+      <div class="nav-right">
+  
+        <nav class="nav-menu">
+          <a href="/{{ lang }}/"
+             class="{% if request.path == '/' + lang + '/' %}active{% endif %}">
+            {{ nav.nav_home }}
+          </a>
+  
+          <a href="/{{ lang }}/services"
+             class="{% if '/services' in request.path %}active{% endif %}">
+            {{ nav.nav_services }}
+          </a>
+  
+          <a href="/{{ lang }}/projects"
+             class="{% if '/projects' in request.path %}active{% endif %}">
+            {{ nav.nav_projects }}
+          </a>
+  
+          <a href="/{{ lang }}/about"
+             class="{% if '/about' in request.path %}active{% endif %}">
+            {{ nav.nav_about }}
+          </a>
+  
+          <a href="/{{ lang }}/contact"
+             class="{% if '/contact' in request.path %}active{% endif %}">
+            {{ nav.nav_contact }}
+          </a>
+        </nav>
+  
+        <div class="lang-switch">
+          <a href="/id/" class="lang-btn {% if lang == 'id' %}active{% endif %}">
+            <span class="fi fi-id"></span>
+          </a>
+  
+          <span class="lang-separator">|</span>
+  
+          <a href="/en/" class="lang-btn {% if lang == 'en' %}active{% endif %}">
+            <span class="fi fi-gb"></span>
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </header>
+  

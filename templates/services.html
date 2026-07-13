@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="hero-overlay">
+
+    <h1></h1>
+    <p><strong>{{ subheading }}</strong></p>
+
+    <!-- CARD PINDAH KE SINI -->
+    <div class="services-container">
+      
+      <div class="service-card">
+        <div class="services-image">
+        <img src="{{ url_for('static', filename='img/consultant.png') }}" alt="GIS Mapping">
+        <h3 class="card-title">{{ card1 }}</h3>
+        </div>
+        <p>{{ desc1 }}</p>
+      </div>
+
+      <div class="service-card">
+        <div class="services-image">
+        <img src="{{ url_for('static', filename='img/sda.png') }}" alt="GIS Mapping">
+        <h3 class="card-title">{{ card2 }}</h3>
+        </div>
+        <p>{{ desc2 }}</p>
+      </div>
+       
+      <div class="service-card">
+        <div class="services-image">
+        <img src="{{ url_for('static', filename='img/gis.png') }}" alt="GIS Mapping">
+        <h3 class="card-title">{{ card3 }}</h3>
+        </div>
+        <p>{{ desc3 }}</p>
+      </div>
+
+      <div class="service-card">
+        <div class="services-image">
+        <img src="{{ url_for('static', filename='img/survey.png') }}" alt="GIS Mapping">
+        <h3 class="card-title">{{ card4 }}</h3>
+        </div>
+        <p>{{ desc4 }}</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="container">
+  <div class="about-container">
+    <h2>{{card1}}</h2>
+    <p>
+       {{content}}
+    </p>
+    <h2>{{card2}}</h2>
+    <p>
+       {{content}}
+    </p>
+    <h2>{{card3}}</h2>
+    <p>
+       {{content}}
+    </p>
+    <h2>{{card4}}</h2>
+    <p>
+       {{content}}
+    </p>
+  </section>
+
+{% endblock %}

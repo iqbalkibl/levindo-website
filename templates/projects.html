@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="bg-slide"></div>
+  <div class="hero-overlay">
+    <h1>Proyek</h1>
+    <p>Kami pernah menjalin kerjasasama dengan banyak perusahaan dan badan usaha yang tersebar di seluruh indonesia</p>
+    
+   <!-- CARD PINDAH KE SINI -->
+   <div class="services-container">
+      
+    <div class="service-card">
+      <h3>{{ card1 }}</h3>
+      <a href="#projectMap" 
+         class="card-btn filter-btn" 
+         data-category="pertambangan">
+         {{ cardbtn }}
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>{{ card2 }}</h3>
+      <a href="#projectMap" 
+         class="card-btn filter-btn" 
+         data-category="kehutanan">
+         {{ cardbtn }}
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>{{ card3 }}</h3>
+      <a href="#projectMap" 
+         class="card-btn filter-btn" 
+         data-category="tatabatas">
+         {{ cardbtn }}
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>{{ card4 }}</h3>
+      <a href="#projectMap" 
+         class="card-btn filter-btn" 
+         data-category="all">
+         {{ cardbtn }}
+      </a>
+    </div>
+
+   </div>
+  </div>
+
+
+</section>
+
+<section class="container">
+  <div class="content-container">
+    <h2></h2>
+    <p>
+       {{content1}}
+    </p>
+</section>
+<section class="container">
+  <div class="about-container">
+    <h2></h2>
+    <p>
+       {{content2 | safe }}
+    </p>
+</section>
+
+<script id="project-data" type="application/json">
+  {{ projects | tojson }}
+</script>
+
+{% endblock %}
