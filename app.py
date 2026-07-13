@@ -12,8 +12,6 @@ from content import BASE_CONTENT
 app = Flask(__name__) 
 
 
-import os
-
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
     "DATABASE_URL",
     "sqlite:///projects.db"
