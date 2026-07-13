@@ -27,8 +27,6 @@ class Project(db.Model):
     latitude = db.Column(db.Float, nullable=False)
     longitude = db.Column(db.Float, nullable=False)
 
-    with app.app_context():
-    db.create_all()
 
     def to_dict(self):
         return {
@@ -39,6 +37,11 @@ class Project(db.Model):
             "lat": self.latitude,
             "lng": self.longitude
         }
+
+
+
+with app.app_context():
+     db.create_all()
 # ======================
 # TRANSLATION SYSTEM
 # ======================
