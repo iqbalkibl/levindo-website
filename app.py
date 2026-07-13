@@ -16,8 +16,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///projects.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
-with app.app_context():
-    db.create_all()
+
 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -27,6 +26,9 @@ class Project(db.Model):
     description = db.Column(db.Text, nullable=True)
     latitude = db.Column(db.Float, nullable=False)
     longitude = db.Column(db.Float, nullable=False)
+
+    with app.app_context():
+    db.create_all()
 
     def to_dict(self):
         return {
