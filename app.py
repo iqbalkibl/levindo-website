@@ -165,18 +165,19 @@ def projects(lang):
     data = get_translated_data(lang)
     projects = Project.query.all()
 
-print("=" * 50)
-print("Jumlah project:", len(projects))
+    print("=" * 50)
+    print("Jumlah project:", len(projects))
 
-for p in projects:
-    print(
-        p.company_name,
-        p.latitude,
-        p.longitude,
-        p.category
-    )
+    for p in projects:
+        print(
+            p.company_name,
+            p.latitude,
+            p.longitude,
+            p.category
+        )
 
-print("=" * 50)
+    print("=" * 50)
+
     projects_data = [p.to_dict() for p in projects]
 
     map_html = '<div id="projectMap" style="width:100%; height:420px;"></div>'
@@ -240,7 +241,7 @@ def about(lang):
         content=BASE_CONTENT
         
 
- )
+)
 
 
 if __name__ == "__main__":
