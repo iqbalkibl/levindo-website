@@ -12,7 +12,12 @@ from content import BASE_CONTENT
 app = Flask(__name__) 
 
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///projects.db"
+import os
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///projects.db"
+)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
