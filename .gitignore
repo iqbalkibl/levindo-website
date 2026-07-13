@@ -10,3 +10,5 @@ instance/
 translations_cache.json
 
 .vscode/
+
+migrate_to_postgres.py
