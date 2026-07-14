@@ -33,7 +33,7 @@ BASE_CONTENT = {
         "alatkami" : "Peralatan yang Kami Miliki"
     },
 # Home
-    "home": "PT. LEVINDO CITRA BUANA adalah perusahaan yang bergerak di bidang Usaha Jasa Konsultansi dan Verifikas Produk dan Legalitas di bidang Pertanian, Perkebunan, Kehutanan, Peternakan, Perikanan, Pertambangan, Gas dan Minyak Bumi, Jasa Lingkungan, Pariwisata termasuk produk-produk Industri dan turunannya.",
+    "home": "PT. LEVINDO CITRA BUANA perusahaan di bidang Usaha Jasa Konsultansi, Verifikasi Produk dan Legalitas di bidang Pertanian, Perkebunan, Kehutanan, Peternakan, Perikanan, Pertambangan, Minyak dan Gas Bumi, Jasa Lingkungan, Pariwisata termasuk produk-produk Industri dan turunannya.",
 
 # Services
 "services": """
