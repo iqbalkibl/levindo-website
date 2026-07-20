@@ -138,7 +138,55 @@ button { background:#166534; color:rgb(231, 218, 218); border:none; padding:12px
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+/* ==========================================
+   MOBILE TOGGLE (Hidden on Desktop)
+========================================== */
 
+.mobile-toggle{
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    margin-left: auto;
+
+    position: relative;
+}
+
+/* 3 garis hamburger */
+.mobile-toggle span{
+    position: absolute;
+
+    left: 8px;
+
+    width: 28px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    transition: all .35s ease;
+}
+
+/* garis atas */
+.mobile-toggle span:nth-child(1){
+    top: 12px;
+}
+
+/* garis tengah */
+.mobile-toggle span:nth-child(2){
+    top: 21px;
+}
+
+/* garis bawah */
+.mobile-toggle span:nth-child(3){
+    top: 30px;
+}
 
 .nav-container{
   max-width:1200px;
@@ -147,6 +195,7 @@ button { background:#166534; color:rgb(231, 218, 218); border:none; padding:12px
 
   display:flex;
   align-items:center;
+  justify-content: space-between;
 }
 
 .logo img{
@@ -810,3 +859,10 @@ button { background:#166534; color:rgb(231, 218, 218); border:none; padding:12px
   font-size: 12px;
   color: #888888;
 }
+
+.mobile-toggle{
+
+display:none;
+
+}
+

@@ -5,6 +5,13 @@
         <img src="{{ url_for('static', filename='img/Levindo1.png') }}" alt="Levindo Citra Buana">
       </div>
   
+<!-- Mobile Hamburger -->
+<button class="mobile-toggle" aria-label="Toggle Navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
       <div class="nav-right">
   
         <nav class="nav-menu">
@@ -13,6 +20,11 @@
             {{ nav.nav_home }}
           </a>
   
+          <a href="/{{ lang }}/about"
+             class="{% if '/about' in request.path %}active{% endif %}">
+            {{ nav.nav_about }}
+          </a>
+
           <a href="/{{ lang }}/services"
              class="{% if '/services' in request.path %}active{% endif %}">
             {{ nav.nav_services }}
@@ -21,11 +33,6 @@
           <a href="/{{ lang }}/projects"
              class="{% if '/projects' in request.path %}active{% endif %}">
             {{ nav.nav_projects }}
-          </a>
-  
-          <a href="/{{ lang }}/about"
-             class="{% if '/about' in request.path %}active{% endif %}">
-            {{ nav.nav_about }}
           </a>
   
           <a href="/{{ lang }}/contact"
@@ -45,8 +52,11 @@
             <span class="fi fi-gb"></span>
           </a>
         </div>
-  
+
       </div>
+
+       <div class="nav-overlay"></div>
+
     </div>
   </header>
   
